@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string-array name="skills">
+        <item>Front End</item>
+        <item>Back End</item>
+    </string-array>
+
+    <string-array name="role">
+        <item>Manager</item>
+        <item>Member</item>
+    </string-array>
+</resources>

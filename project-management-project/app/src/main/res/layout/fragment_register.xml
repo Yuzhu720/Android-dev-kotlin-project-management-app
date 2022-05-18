@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.southampton.comp6239.MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/photo"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:padding="1dp"
+                    android:src="@drawable/good_morning_img"
+                    app:shapeAppearance="@style/circleStyle"
+                    app:strokeColor="@android:color/holo_blue_bright"
+                    app:strokeWidth="2dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/first_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:hint="first name"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:text="@={loginViewModel.user.firstname}"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableEnd="@drawable/ic_lock_white_24dp"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:hint="last name"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:text="@={loginViewModel.user.lastname}"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/mail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableEnd="@drawable/ic_lock_white_24dp"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:hint="E-mail"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:text="@={loginViewModel.user.email}"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableEnd="@drawable/ic_lock_white_24dp"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:hint="phone number"
+                            android:inputType="textPhonetic"
+                            android:maxLines="1"
+                            android:text="@={loginViewModel.user.phone}"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableEnd="@drawable/ic_lock_white_24dp"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:hint="password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:text="@={loginViewModel.user.password}"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/confirm_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableEnd="@drawable/ic_lock_white_24dp"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:hint="confirm password"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_width="45dp"
+                            android:fontFamily="@font/calibri"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:text="Role:"/>
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/role"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="35dp"
+                            android:popupTheme="@style/common_spinner"
+                            style="@style/common_spinner"
+                            app:theme="@style/common_spinner"
+                            android:entries="@array/role"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/skill"
+                            android:layout_height="match_parent"
+                            android:layout_width="45dp"
+                            android:fontFamily="@font/calibri"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:text="Skill:"/>
+
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/skills"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="35dp"
+                            android:popupTheme="@style/common_spinner"
+                            style="@style/common_spinner"
+                            app:theme="@style/common_spinner"
+                            android:entries="@array/skills"
+                            />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/calibri"
+                            android:text="Register"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="loginViewModel"
+            type="com.southampton.comp6239.viewModel.LoginViewModel" />
+    </data>
+</layout>
